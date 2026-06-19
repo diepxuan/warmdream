@@ -8,10 +8,15 @@
     :root {
       color-scheme: light;
       --ink: #172033;
-      --muted: #5d667a;
-      --line: #d9deea;
-      --soft: #f5f7fb;
-      --brand: #0b72b9;
+      --muted: #647084;
+      --line: #dce3ef;
+      --soft: #f6f9fd;
+      --soft-2: #eef6ff;
+      --brand: #0877bd;
+      --brand-dark: #07598e;
+      --accent: #f2b84b;
+      --warm-green: #274f3d;
+      --success: #17845b;
     }
 
     * { box-sizing: border-box; }
@@ -20,146 +25,256 @@
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
       color: var(--ink);
-      background: #eef2f7;
+      background:
+        radial-gradient(circle at top left, rgba(8, 119, 189, 0.18), transparent 34%),
+        linear-gradient(135deg, #edf4fb 0%, #f8fbff 48%, #eef5fb 100%);
       line-height: 1.45;
     }
 
     .page {
       width: 210mm;
       min-height: 297mm;
-      margin: 16px auto;
-      padding: 18mm;
+      margin: 18px auto;
+      overflow: hidden;
       background: #fff;
-      box-shadow: 0 12px 36px rgba(20, 35, 70, 0.12);
+      border-radius: 18px;
+      box-shadow: 0 18px 48px rgba(23, 32, 51, 0.16);
     }
 
-    .header {
+    .hero {
+      position: relative;
       display: grid;
-      grid-template-columns: 1fr 120px;
-      gap: 24px;
+      grid-template-columns: 1fr 150px;
+      gap: 26px;
       align-items: start;
-      padding-bottom: 18px;
-      border-bottom: 3px solid var(--brand);
+      padding: 18mm 18mm 16mm;
+      color: #fff;
+      background:
+        linear-gradient(135deg, rgba(39, 79, 61, 0.97), rgba(8, 119, 189, 0.88)),
+        linear-gradient(45deg, #274f3d, #0f8bd3);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      right: -36px;
+      bottom: -54px;
+      width: 190px;
+      height: 190px;
+      border: 28px solid rgba(255, 255, 255, 0.12);
+      border-radius: 50%;
+    }
+
+    .brand-logo {
+      display: block;
+      width: 230px;
+      max-width: 100%;
+      height: auto;
+      margin: 0 0 14px;
+      padding: 8px 12px;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.92);
+      box-shadow: 0 10px 24px rgba(7, 61, 104, 0.18);
     }
 
     .eyebrow {
       margin: 0 0 8px;
-      color: var(--brand);
+      color: #cbe9ff;
       font-size: 12px;
       font-weight: 700;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.11em;
       text-transform: uppercase;
     }
 
     h1 {
       margin: 0 0 8px;
-      font-size: 28px;
-      line-height: 1.2;
+      font-size: 31px;
+      line-height: 1.12;
     }
 
     .subtitle {
+      max-width: 520px;
       margin: 0;
-      color: var(--muted);
+      color: rgba(255, 255, 255, 0.86);
       font-size: 14px;
     }
 
+    .status-pill {
+      display: inline-flex;
+      gap: 7px;
+      align-items: center;
+      margin-top: 16px;
+      padding: 7px 11px;
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.13);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: #45d18d;
+      box-shadow: 0 0 0 4px rgba(69, 209, 141, 0.2);
+    }
+
     .logo-box {
-      border: 1px solid var(--line);
-      border-radius: 10px;
-      padding: 8px;
+      position: relative;
+      z-index: 1;
+      padding: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.34);
+      border-radius: 16px;
       text-align: center;
-      background: var(--soft);
+      background: rgba(255, 255, 255, 0.95);
+      box-shadow: 0 16px 30px rgba(7, 61, 104, 0.22);
     }
 
     .logo-box img {
       display: block;
       max-width: 100%;
       height: auto;
-      margin: 0 auto 6px;
+      margin: 0 auto 7px;
+      border-radius: 10px;
     }
 
     .logo-box span {
       display: block;
       color: var(--muted);
       font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
     }
+
+    .content { padding: 0 18mm 14mm; }
 
     .summary {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 10px;
-      margin: 18px 0;
+      margin: -11mm 0 17px;
+      position: relative;
+      z-index: 2;
     }
 
     .summary-card {
-      padding: 12px;
-      border: 1px solid var(--line);
-      border-radius: 10px;
-      background: var(--soft);
+      min-height: 75px;
+      padding: 13px;
+      border: 1px solid rgba(220, 227, 239, 0.9);
+      border-radius: 14px;
+      background: #fff;
+      box-shadow: 0 10px 24px rgba(23, 32, 51, 0.08);
     }
 
     .summary-card span {
       display: block;
-      margin-bottom: 4px;
+      margin-bottom: 5px;
       color: var(--muted);
-      font-size: 11px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
       text-transform: uppercase;
     }
 
     .summary-card strong {
       display: block;
-      font-size: 15px;
+      color: var(--brand-dark);
+      font-size: 14px;
+      line-height: 1.25;
     }
 
-    h2 {
-      margin: 22px 0 10px;
-      padding-bottom: 6px;
-      border-bottom: 1px solid var(--line);
+    .section-title {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      margin: 21px 0 10px;
+      color: var(--ink);
       font-size: 18px;
+    }
+
+    .section-title::before {
+      content: "";
+      width: 7px;
+      height: 24px;
+      border-radius: 999px;
+      background: linear-gradient(180deg, var(--warm-green), var(--accent));
     }
 
     table {
       width: 100%;
-      border-collapse: collapse;
+      overflow: hidden;
+      border-collapse: separate;
+      border-spacing: 0;
       margin: 8px 0 14px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
       font-size: 13px;
     }
 
     th, td {
-      padding: 9px 10px;
-      border: 1px solid var(--line);
+      padding: 10px 12px;
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
       vertical-align: top;
     }
 
+    tr:last-child th,
+    tr:last-child td { border-bottom: 0; }
+
+    th:last-child,
+    td:last-child { border-right: 0; }
+
     th {
       width: 34%;
-      color: var(--muted);
-      background: var(--soft);
+      color: var(--brand-dark);
+      background: var(--soft-2);
       text-align: left;
       font-weight: 700;
     }
 
-    .events th {
+    td { background: #fff; }
+
+    .events thead th {
       width: auto;
-      color: var(--ink);
+      color: #fff;
+      background: var(--brand-dark);
+    }
+
+    .events tbody tr:nth-child(even) td { background: var(--soft); }
+
+    .protected {
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: rgba(23, 132, 91, 0.12);
+      color: var(--success);
+      font-size: 12px;
+      font-weight: 700;
     }
 
     .note {
       margin: 18px 0 0;
-      padding: 12px 14px;
-      border-left: 4px solid var(--brand);
-      background: var(--soft);
+      padding: 13px 15px;
+      border: 1px solid #d8e9f8;
+      border-left: 5px solid var(--brand);
+      border-radius: 12px;
+      background: linear-gradient(135deg, #f4faff, #fff);
       color: var(--muted);
       font-size: 12px;
     }
 
     .footer {
-      margin-top: 24px;
+      margin-top: 22px;
       padding-top: 12px;
       border-top: 1px solid var(--line);
       color: var(--muted);
       font-size: 11px;
+      word-break: break-word;
     }
+
+    .footer a { color: var(--brand-dark); }
 
     @media print {
       body { background: #fff; }
@@ -167,25 +282,31 @@
         width: auto;
         min-height: auto;
         margin: 0;
-        padding: 0;
+        border-radius: 0;
         box-shadow: none;
       }
+      .hero { padding: 0 0 14mm; }
+      .brand-logo { box-shadow: none; }
+      .content { padding: 0; }
+      .summary { margin-top: -9mm; }
       a { color: inherit; text-decoration: none; }
     }
 
     @page {
       size: A4;
-      margin: 16mm;
+      margin: 14mm;
     }
   </style>
 </head>
 <body>
   <main class="page">
-    <header class="header">
+    <header class="hero">
       <div>
-        <p class="eyebrow">Hồ sơ nhãn hiệu</p>
+        <img class="brand-logo" src="../assets/warm-dream-logo.png" alt="Warm Dream logo">
+        <p class="eyebrow">Hồ sơ văn bằng bảo hộ nhãn hiệu</p>
         <h1>Warm Dream S</h1>
-        <p class="subtitle">Thông tin văn bằng bảo hộ nhãn hiệu trích từ hệ thống WIPO Publish/IP Việt Nam.</p>
+        <p class="subtitle">Bản tổng hợp thông tin nhãn hiệu phục vụ in ấn, lưu PDF và đối chiếu hồ sơ nội bộ.</p>
+        <div class="status-pill"><span class="status-dot"></span>Trạng thái: Cấp bằng</div>
       </div>
       <div class="logo-box">
         <img src="https://wipopublish.ipvietnam.gov.vn/wopublish-search/service/trademarks/application/VN4201735449/logo?noLogo=true" alt="Mẫu nhãn Warm Dream S">
@@ -193,56 +314,58 @@
       </div>
     </header>
 
-    <section class="summary" aria-label="Tóm tắt">
-      <div class="summary-card"><span>Số đơn</span><strong>VN-4-2017-35449</strong></div>
-      <div class="summary-card"><span>Số bằng</span><strong>4-0347089-000</strong></div>
-      <div class="summary-card"><span>Ngày cấp</span><strong>11.03.2020</strong></div>
-      <div class="summary-card"><span>Trạng thái</span><strong>Cấp bằng</strong></div>
-    </section>
+    <div class="content">
+      <section class="summary" aria-label="Tóm tắt">
+        <div class="summary-card"><span>Số đơn</span><strong>VN-4-2017-35449</strong></div>
+        <div class="summary-card"><span>Số bằng</span><strong>4-0347089-000</strong></div>
+        <div class="summary-card"><span>Ngày cấp</span><strong>11.03.2020</strong></div>
+        <div class="summary-card"><span>Hiệu lực đến</span><strong>30.10.2027</strong></div>
+      </section>
 
-    <section>
-      <h2>Dữ liệu thư mục</h2>
-      <table>
-        <tbody>
-          <tr><th>Loại đơn</th><td>Nhãn hiệu - Thông thường</td></tr>
-          <tr><th>Nhãn hiệu</th><td>Warm Dream S</td></tr>
-          <tr><th>Số bằng và ngày cấp</th><td>4-0347089-000 - 11.03.2020</td></tr>
-          <tr><th>Ngày hết hạn</th><td>30.10.2027</td></tr>
-          <tr><th>Số đơn và ngày nộp đơn</th><td>VN-4-2017-35449 - 30.10.2017</td></tr>
-          <tr><th>Số công bố và ngày công bố</th><td>VN-4-2017-35449 - 25.04.2020 - 385B<br>VN-4-2017-35449 - 25.01.2018 - 385B</td></tr>
-          <tr><th>Màu sắc nhãn hiệu</th><td>Xanh nước biển, trắng, vàng.</td></tr>
-          <tr><th>Nhóm sản phẩm/dịch vụ</th><td>Nhóm 20: Đệm; đệm mút; tấm đệm để ngủ; gối; gối ôm.</td></tr>
-          <tr><th>Phân loại hình</th><td>03.13.24 (7); 05.03.13 (7); 05.03.15 (7); 26.11.12 (7)</td></tr>
-          <tr><th>Chủ đơn/Chủ bằng</th><td>Công ty TNHH Điệp Xuân<br>Số 241 Trần Hưng Đạo, phường Nam Lý, thành phố Đồng Hới, tỉnh Quảng Bình</td></tr>
-          <tr><th>Kiểu mẫu nhãn</th><td>Combined</td></tr>
-          <tr><th>Yếu tố loại trừ</th><td>Nhãn hiệu được bảo hộ tổng thể. Không bảo hộ riêng "S".</td></tr>
-        </tbody>
-      </table>
-    </section>
+      <section>
+        <h2 class="section-title">Dữ liệu thư mục</h2>
+        <table>
+          <tbody>
+            <tr><th>Loại đơn</th><td>Nhãn hiệu - Thông thường</td></tr>
+            <tr><th>Nhãn hiệu</th><td><strong>Warm Dream S</strong></td></tr>
+            <tr><th>Số bằng và ngày cấp</th><td>4-0347089-000 - 11.03.2020</td></tr>
+            <tr><th>Ngày hết hạn</th><td>30.10.2027</td></tr>
+            <tr><th>Số đơn và ngày nộp đơn</th><td>VN-4-2017-35449 - 30.10.2017</td></tr>
+            <tr><th>Số công bố và ngày công bố</th><td>VN-4-2017-35449 - 25.04.2020 - 385B<br>VN-4-2017-35449 - 25.01.2018 - 385B</td></tr>
+            <tr><th>Màu sắc nhãn hiệu</th><td>Xanh nước biển, trắng, vàng.</td></tr>
+            <tr><th>Nhóm sản phẩm/dịch vụ</th><td>Nhóm 20: Đệm; đệm mút; tấm đệm để ngủ; gối; gối ôm.</td></tr>
+            <tr><th>Phân loại hình</th><td>03.13.24 (7); 05.03.13 (7); 05.03.15 (7); 26.11.12 (7)</td></tr>
+            <tr><th>Chủ đơn/Chủ bằng</th><td><strong>Công ty TNHH Điệp Xuân</strong><br>Số 241 Trần Hưng Đạo, phường Nam Lý, thành phố Đồng Hới, tỉnh Quảng Bình</td></tr>
+            <tr><th>Kiểu mẫu nhãn</th><td>Combined</td></tr>
+            <tr><th>Yếu tố loại trừ</th><td><span class="protected">Bảo hộ tổng thể</span><br>Không bảo hộ riêng "S".</td></tr>
+          </tbody>
+        </table>
+      </section>
 
-    <section>
-      <h2>Tiến trình xử lý</h2>
-      <table class="events">
-        <thead>
-          <tr><th>Tiến trình</th><th>Ngày</th><th>Trạng thái</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>Application Filing</td><td>30.10.2017</td><td>Nộp đơn</td></tr>
-          <tr><td>221 - Quyết định chấp nhận đơn hợp lệ</td><td>30.11.2017</td><td></td></tr>
-          <tr><td>Công bố A</td><td>25.01.2018</td><td></td></tr>
-          <tr><td>251 - Thông báo cấp văn bằng</td><td>21.01.2020</td><td></td></tr>
-          <tr><td>4151 - Lệ phí cấp bằng</td><td>13.02.2020</td><td></td></tr>
-          <tr><td>263 - Quyết định cấp VBBH</td><td>11.03.2020</td><td></td></tr>
-          <tr><td>Công bố B</td><td>25.04.2020</td><td></td></tr>
-        </tbody>
-      </table>
-    </section>
+      <section>
+        <h2 class="section-title">Tiến trình xử lý</h2>
+        <table class="events">
+          <thead>
+            <tr><th>Tiến trình</th><th>Ngày</th><th>Trạng thái</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Application Filing</td><td>30.10.2017</td><td>Nộp đơn</td></tr>
+            <tr><td>221 - Quyết định chấp nhận đơn hợp lệ</td><td>30.11.2017</td><td></td></tr>
+            <tr><td>Công bố A</td><td>25.01.2018</td><td></td></tr>
+            <tr><td>251 - Thông báo cấp văn bằng</td><td>21.01.2020</td><td></td></tr>
+            <tr><td>4151 - Lệ phí cấp bằng</td><td>13.02.2020</td><td></td></tr>
+            <tr><td>263 - Quyết định cấp VBBH</td><td>11.03.2020</td><td></td></tr>
+            <tr><td>Công bố B</td><td>25.04.2020</td><td></td></tr>
+          </tbody>
+        </table>
+      </section>
 
-    <p class="note">Nguồn dữ liệu: WIPO Publish/IP Việt Nam, mã bản ghi VN4201735449. File này dùng để in/lưu hồ sơ nội bộ; khi nộp cho bên thứ ba nên đối chiếu lại trên hệ thống chính thức tại thời điểm sử dụng.</p>
+      <p class="note">Nguồn dữ liệu: WIPO Publish/IP Việt Nam, mã bản ghi VN4201735449. File này dùng để in/lưu hồ sơ nội bộ; khi nộp cho bên thứ ba nên đối chiếu lại trên hệ thống chính thức tại thời điểm sử dụng.</p>
 
-    <footer class="footer">
-      Tạo ngày 19.06.2026. Đường dẫn chi tiết tham khảo: https://wipopublish.ipvietnam.gov.vn/wopublish-search/detail/trademarks?id=VN4201735449
-    </footer>
+      <footer class="footer">
+        Tạo ngày 19.06.2026. Đường dẫn chi tiết tham khảo: <a href="https://wipopublish.ipvietnam.gov.vn/wopublish-search/detail/trademarks?id=VN4201735449">https://wipopublish.ipvietnam.gov.vn/wopublish-search/detail/trademarks?id=VN4201735449</a>
+      </footer>
+    </div>
   </main>
 </body>
 </html>

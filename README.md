@@ -32,7 +32,9 @@ http://localhost:8080
 .
 ├── index.html                              # Nội dung landing page
 ├── assets/
-│   └── styles.css                          # Giao diện và responsive layout
+│   ├── styles.css                          # Giao diện và responsive layout
+│   ├── warm-dream-logo.png                 # Logo chữ Warm Dream dùng cho hồ sơ in
+│   └── warm-dream-brand.png                # Biểu tượng thương hiệu dự phòng
 ├── documents/
 │   └── trademark-registration.html         # Hồ sơ nhãn hiệu Warm Dream S dạng in A4
 ├── LICENSE
