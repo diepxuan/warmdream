@@ -30,12 +30,29 @@ http://localhost:8080
 
 ```text
 .
-├── index.html          # Nội dung landing page
+├── index.html                              # Nội dung landing page
 ├── assets/
-│   └── styles.css      # Giao diện và responsive layout
+│   └── styles.css                          # Giao diện và responsive layout
+├── documents/
+│   └── trademark-registration.html         # Hồ sơ nhãn hiệu Warm Dream S dạng in A4
 ├── LICENSE
+├── CHANGELOG.md
 └── README.md
 ```
+
+## Hồ sơ nhãn hiệu
+
+File `documents/trademark-registration.html` là bản tổng hợp thông tin văn bằng bảo hộ nhãn hiệu Warm Dream S, tối ưu để in A4 hoặc lưu PDF.
+
+Cách in:
+
+1. Mở file bằng trình duyệt.
+2. Chọn `Print` hoặc `Ctrl+P`.
+3. Destination: máy in hoặc `Save as PDF`.
+4. Paper size: A4.
+5. Margins: Default hoặc None nếu muốn trình duyệt dùng margin từ file.
+
+Nguồn dữ liệu: WIPO Publish/IP Việt Nam, mã bản ghi `VN4201735449`.
 
 ## Dependencies
 
