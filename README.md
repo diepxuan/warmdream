@@ -37,7 +37,6 @@ http://localhost:8080
 │   ├── warm-dream-brand.png                # Biểu tượng thương hiệu dự phòng
 │   ├── warm-dream-brand.svg                # Brand icon MetallicBrown dùng trong header hồ sơ in
 │   └── warm-dream-favicon.svg              # Icon/favicons MetallicBrown dùng cho favicon
-│   └── products/                           # Ảnh sản phẩm WarmDream dùng trên landing page
 ├── documents/
 │   └── trademark-registration.html         # Hồ sơ nhãn hiệu Warm Dream S dạng in A4
 ├── LICENSE
@@ -85,7 +84,6 @@ Cách bật:
 Các phần cần chỉnh trong `index.html`:
 
 - Nội dung hero thương hiệu WarmDream
-- Danh mục sản phẩm tại section `#products`
 - Định vị thương hiệu tại section `#brand`
 - Hồ sơ nhãn hiệu tại section `#trademark`
 - Link liên hệ/trang Điệp Xuân tại section `#contact`
@@ -101,7 +99,7 @@ Các phần cần chỉnh trong `index.html`:
 
 - Không có CMS, chỉnh nội dung bằng code.
 - Không có form backend; CTA hiện dùng `mailto:`.
-- Một số danh mục dùng placeholder vì chưa có đủ ảnh sản phẩm sạch trong kho dữ liệu.
+- Bước hiện tại tập trung vào landing brand nên chưa hiển thị danh mục/chi tiết sản phẩm; phần này sẽ bổ sung ở bước tiếp theo khi có ảnh và dữ liệu sạch.
 
 ## Troubleshooting
 
