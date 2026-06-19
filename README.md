@@ -1,10 +1,10 @@
 # WarmDream
 
-WarmDream là trang giới thiệu sản phẩm dạng landing page hiện đại, tối ưu cho GitHub Pages hoặc static hosting.
+WarmDream là website giới thiệu thương hiệu chăn ga gối đệm WarmDream của Công ty TNHH Điệp Xuân, tối ưu cho GitHub Pages hoặc static hosting.
 
 ## Mục đích
 
-Trang này dùng để giới thiệu sản phẩm, trình bày giá trị cốt lõi, tính năng nổi bật và kêu gọi khách hàng liên hệ hoặc dùng thử.
+Trang này dùng để giới thiệu thương hiệu WarmDream, trình bày các dòng sản phẩm chăn ga gối đệm, liên kết hồ sơ nhãn hiệu và dẫn khách hàng tới các trang sản phẩm/liên hệ.
 
 ## Cách sử dụng
 
@@ -83,24 +83,23 @@ Cách bật:
 
 Các phần cần chỉnh trong `index.html`:
 
-- Tên sản phẩm: `WarmDream`
-- Mô tả hero
-- Tính năng tại section `#features`
-- Lợi ích tại section `#benefits`
-- Email liên hệ tại section `#contact`
+- Nội dung hero thương hiệu WarmDream
+- Định vị thương hiệu tại section `#brand`
+- Hồ sơ nhãn hiệu tại section `#trademark`
+- Link liên hệ/trang Điệp Xuân tại section `#contact`
 
 ## Quyết định thiết kế
 
 - Dùng HTML/CSS thuần để triển khai nhanh, dễ host trên GitHub Pages.
 - Không dùng framework để giảm độ phức tạp và tránh build step.
 - Thiết kế responsive theo hướng mobile-first fallback.
-- Màu sắc ấm, gradient hiện đại, phù hợp tên WarmDream.
+- Màu sắc lấy theo hướng nâu/xanh của nhận diện WarmDream, phù hợp sản phẩm phòng ngủ.
 
 ## Trade-offs
 
 - Không có CMS, chỉnh nội dung bằng code.
 - Không có form backend; CTA hiện dùng `mailto:`.
-- Không có tối ưu ảnh vì phiên bản hiện tại chưa dùng asset hình ảnh thật.
+- Bước hiện tại tập trung vào landing brand nên chưa hiển thị danh mục/chi tiết sản phẩm; phần này sẽ bổ sung ở bước tiếp theo khi có ảnh và dữ liệu sạch.
 
 ## Troubleshooting
 
