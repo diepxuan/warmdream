@@ -34,7 +34,9 @@ http://localhost:8080
 ├── assets/
 │   ├── styles.css                          # Giao diện và responsive layout
 │   ├── warm-dream-logo.png                 # Logo chữ Warm Dream dùng cho hồ sơ in
-│   └── warm-dream-brand.png                # Biểu tượng thương hiệu dự phòng
+│   ├── warm-dream-brand.png                # Biểu tượng thương hiệu dự phòng
+│   ├── warm-dream-brand.svg                # Brand icon MetallicBrown dùng trong header hồ sơ in
+│   └── warm-dream-favicon.svg              # Icon/favicons MetallicBrown dùng cho favicon
 ├── documents/
 │   └── trademark-registration.html         # Hồ sơ nhãn hiệu Warm Dream S dạng in A4
 ├── LICENSE
