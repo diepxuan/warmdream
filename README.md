@@ -1,10 +1,21 @@
 # WarmDream
 
-WarmDream là website giới thiệu thương hiệu chăn ga gối đệm WarmDream của Công ty TNHH Điệp Xuân, tối ưu cho GitHub Pages hoặc static hosting.
+WarmDream là thương hiệu chăn ga gối đệm thuộc Công ty TNHH Điệp Xuân. Repo này chứa website giới thiệu thương hiệu WarmDream, tối ưu cho GitHub Pages hoặc static hosting.
+
+WarmDream không phải là một doanh nghiệp độc lập. Thông tin doanh nghiệp, lịch sử hoạt động và đầu mối liên hệ được kế thừa từ hệ thống Điệp Xuân.
+
+## Về Điệp Xuân
+
+Công ty TNHH Điệp Xuân có tiền thân là cửa hàng Điệp Xuân, hoạt động trong lĩnh vực chăn ga gối đệm và nội thất phòng ngủ tại Quảng Bình từ năm 1991. Doanh nghiệp mở rộng sang sản xuất, phân phối và hệ thống showroom; WarmDream là một thương hiệu sản phẩm do Điệp Xuân phát triển.
+
+Thông tin tham khảo chính thức:
+
+- [Hồ sơ tổ chức Điệp Xuân](https://github.com/diepxuan/.github/blob/main/profile/README.md)
+- [Website Điệp Xuân](https://www.diepxuan.com/)
 
 ## Mục đích
 
-Trang này dùng để giới thiệu thương hiệu WarmDream, trình bày các dòng sản phẩm chăn ga gối đệm, liên kết hồ sơ nhãn hiệu và dẫn khách hàng tới các trang sản phẩm/liên hệ.
+Trang này dùng để giới thiệu WarmDream trong hệ sinh thái Điệp Xuân, trình bày các dòng sản phẩm chăn ga gối đệm, liên kết hồ sơ nhãn hiệu và dẫn khách hàng về đầu mối sản phẩm/liên hệ của Điệp Xuân.
 
 ## Cách sử dụng
 
