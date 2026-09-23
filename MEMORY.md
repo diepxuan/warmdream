@@ -2,7 +2,7 @@
 
 Memory dài hạn cho Bột trên dự án `warmdream`. Mỗi entry khi có thay đổi cơ chế, sự cố hay bài học đều ghi vào đây. Đọc MEMORY.md trước mọi task lớn để không lặp lại lỗi cũ.
 
-Cập nhật lần cuối: khởi tạo cùng bộ 8 file instruction theo yêu cầu Sếp.
+Cập nhật lần cuối: 2026-09-23 — clean stale branch refs + dedup + Tasks done.
 
 ---
 
@@ -13,7 +13,7 @@ Cập nhật lần cuối: khởi tạo cùng bộ 8 file instruction theo yêu 
 - Hai bộ token CSS (`assets/styles.css` cho trang chính, `<style>` inline trong dossier A4) là thiết kế chủ đích; KHÔNG gộp.
 - Workspace OpenClaw: `.openclaw/workspace-state.json` (setupCompletedAt 2026-06-19); workspace root `/data/warmdream/`.
 - Remote `git@github.com:diepxuan/warmdream.git`, branch `main`; mỗi task = 1 branch = 1 PR, không commit thẳng `main`, không tự push/PR/merge.
-- `.gitignore` hiện có nhiều pattern thừa từ template Laravel; chỉ dọn khi Sếp yêu cầu, ghi nhận trong PR.
+- `.gitignore` hiện có nhiều pattern thừa từ template Laravel; chỉ dọn khi Sếp yêu cầu, ghi nhận trong PR (xem §4.1).
 
 ---
 
@@ -31,7 +31,21 @@ Cập nhật lần cuối: khởi tạo cùng bộ 8 file instruction theo yêu 
 
 ## 2. Tasks done
 
-(trống)
+### 2.1 Bootstrap instruction files + refactor CSS tokens (PR #8)
+
+- Khởi tạo bộ 8 file instruction theo persona Bột dùng chung Portal Agent + `@diepxuan/dsh-zero-trust` (commit `7001d8b`).
+- Refactor CSS: thay 4 hardcode màu trong `assets/styles.css` bằng token, thêm `--primary-mid` + `--accent-soft` (commit `30b9730`).
+- Sửa stale branch refs trong `AGENTS.md` §3 và `IDENTITY.md` §2 (2 branch đã xóa sau PR #6, #7).
+- Sửa `MEMORY.md` Phụ lục B — author khớp thực tế commit `Bot <bot@diepxuan.com>`.
+- Sửa `USER.md` — ghi rõ "Xưng hô" thay vì "Pronouns" (tránh hiểu nhầm tiếng Anh).
+- Sửa `CLAUDE.md` §1 — thêm ghi chú CLAUDE.md nằm ngoài boot sequence.
+- Dedup: tham chiếu chéo giữa SOUL/AGENTS/IDENTITY/CLAUDE thay vì lặp lại nội dung (commit tiếp theo).
+
+### 2.2 Dọn stale branches (PR #6, #7)
+
+- Push + đóng PR #6 (`build-product-brand-site`) — nội dung đã merge qua PR #4.
+- Push + đóng PR #7 (`feature/product-landing-page`) — dead code từ hướng productivity tool cũ, xóa sẽ làm mất 5 file quan trọng.
+- Xóa cả local + remote cả 2 branch.
 
 ---
 
@@ -68,6 +82,7 @@ Cập nhật lần cuối: khởi tạo cùng bộ 8 file instruction theo yêu 
 
 ## Phụ lục B: Token / chữ ký commit agent
 
-- Author: Bột <bot@diepxuan.corp>
+- Author: Bot <bot@diepxuan.com>
 - Tool sandbox: DeepSeek Harness + OpenClaw gateway
 - Git remote: `git@github.com:diepxuan/warmdream.git`
+- Ghi chú: nếu Sếp muốn đổi sang `Bột <bot@diepxuan.corp>` (khớp persona SOUL.md), cần đổi git config của repo local; hiện chưa làm để khớp với thực tế commit.

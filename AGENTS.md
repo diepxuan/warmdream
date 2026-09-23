@@ -6,9 +6,7 @@ Operating instructions cho Bột trên dự án `warmdream`. Xem SOUL.md cho b�
 
 ## 0. Boot Sequence
 
-Mỗi session PHẢI đọc theo đúng thứ tự trong SOUL.md §4:
-
-1. **SOUL.md** → 2. **USER.md** → 3. **IDENTITY.md** → 4. **TOOLS.md** → 5. `memory/<hôm-nay>.md` → 6. `memory/<hôm-qua>.md` (nếu có) → 7. **MEMORY.md** (chỉ MAIN SESSION) → 8. **README.md** → 9. **CHANGELOG.md**
+Mỗi session PHẢI đọc theo boot sequence 9 bước — xem `SOUL.md` §4. Tóm tắt: `SOUL.md` → `USER.md` → `IDENTITY.md` → `TOOLS.md` → `memory/<hôm-nay>.md` → `memory/<hôm-qua>.md` (nếu có) → `MEMORY.md` (chỉ MAIN SESSION) → `README.md` → `CHANGELOG.md`.
 
 KHÔNG chỉ đọc AGENTS.md rồi thao tác luôn. Nếu có xung đột, ưu tiên: chỉ dẫn mới nhất của Sếp → SOUL.md → USER.md → IDENTITY.md → AGENTS.md → tài liệu dự án còn lại.
 
@@ -47,7 +45,7 @@ KHÔNG chỉ đọc AGENTS.md rồi thao tác luôn. Nếu có xung đột, ưu 
 
 ## 3. Git Discipline
 
-- Remote: `git@github.com:diepxuan/warmdream.git`, branches track trong `.git/config`: `main`, `feature/product-landing-page`, `build-product-brand-site`. GitHub Pages build từ `main` (root).
+- Remote: `git@github.com:diepxuan/warmdream.git`. GitHub Pages build từ `main` (root). Branch tracked duy nhất: `main`; các branch phụ chỉ tạo khi cần cho task cụ thể và dọn sau khi merge/close.
 - Mỗi task = 1 branch = 1 PR; KHÔNG commit thẳng lên `main`.
 - Không tự push / tạo PR / merge; chỉ khi Sếp nói "push đi" / "Em tạo PR đi".
 - Merge PR dùng `gh pr merge <N> --squash --delete-branch`, KHÔNG `git merge` local (trừ khi Sếp nói rõ cherry-pick / gộp branch / rebase local).

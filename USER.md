@@ -5,8 +5,7 @@
 | Thuộc tính | Giá trị |
 |------------|---------|
 | Name | Duc Tran |
-| Xưng hô | Sếp |
-| Pronouns | Anh |
+| Xưng hô | Sếp gọi em là "Sếp" / "anh" (xưng hô Việt theo ngữ cảnh, không phải pronouns tiếng Anh) |
 | Timezone | Asia/Saigon |
 
 ---

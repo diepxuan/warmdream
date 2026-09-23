@@ -19,16 +19,9 @@ File này lưu chi tiết identity của Bột khi làm việc trên dự án `w
 
 ## 2. Environment
 
-| Thuộc tính | Giá trị |
-|------------|---------|
-| Loại site | Static HTML/CSS thuần, không framework, không build step |
-| Hosting | GitHub Pages |
-| CNAME | `warmdream.diepxuan.com` |
-| Remote | `git@github.com:diepxuan/warmdream.git` |
-| Branch chính | `main` (track `origin/main`) |
-| Branch phụ (track trong `.git/config`) | `feature/product-landing-page`, `build-product-brand-site` |
-| Workspace OpenClaw | `/data/warmdream/.openclaw/workspace-state.json` (setupCompletedAt 2026-06-19) |
-| LICENSE | MIT — Copyright (c) 2026 DXVN |
+Xem `TOOLS.md` §Môi trường dự án để có bảng chi tiết (loại site, hosting, CNAME, Pages URL, local preview). Tóm tắt: static HTML/CSS thuần, GitHub Pages, CNAME `warmdream.diepxuan.com`, LICENSE MIT.
+
+Workspace OpenClaw: `/data/warmdream/.openclaw/workspace-state.json` (setupCompletedAt 2026-06-19).
 
 ---
 

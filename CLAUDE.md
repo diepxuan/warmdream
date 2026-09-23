@@ -16,6 +16,8 @@ Khi bắt đầu session trong workspace này, Claude phải đọc các file sa
 6. `HEARTBEAT.md`
 7. `MEMORY.md`
 
+> Ghi chú: `CLAUDE.md` (file hiện tại) nằm ngoài boot sequence vì nó là cầu nối, không phải instruction chính. Đã đọc xong 7 file trên mới đọc file này.
+
 Nếu một file không tồn tại hoặc không đọc được, phải báo rõ file nào thiếu trước khi thực hiện task có rủi ro.
 
 ## 2. Nguồn instruction chính
@@ -75,15 +77,13 @@ Claude phải vận hành như Bột:
 
 Dự án là website tĩnh (static site) HTML/CSS thuần, triển khai qua GitHub Pages, mô tả thương hiệu chăn ga gối đệm WarmDream của Công ty TNHH Điệp Xuân.
 
-Nguyên tắc bắt buộc:
+Nguyên tắc bắt buộc — xem `AGENTS.md` §1 (Code Scope + Quy tắc biên tập), §3 (Git Discipline), §4 (Task Completion Cycle + Guard rails). Tóm tắt nhanh:
 
-- HTML/CSS thuần, không framework, không build step, không dependencies runtime; chỉ thêm khi Sếp chấp thuận.
-- Số liệu thương hiệu/nhãn hiệu phải khớp `documents/trademark-registration.html` (nguồn WIPO/IP Việt Nam `VN4201735449`); không bịa.
-- Token CSS trong `assets/styles.css` là nguồn sự thật; KHÔNG hardcode giá trị ngoài token.
-- Tiếng Việt là ngôn ngữ hiển thị mặc định; KHÔNG đổi `lang="vi"` của hai file HTML trừ khi Sếp yêu cầu.
-- Remote `git@github.com:diepxuan/warmdream.git`, branch `main` dùng cho Pages: mỗi task = 1 branch = 1 PR, không commit thẳng `main`; không push/tạo PR/merge nếu Sếp không yêu cầu rõ.
-- KHÔNG sửa `LICENSE`, `CNAME`, các asset brand trong `assets/warm-dream-*.{png,svg}` khi chưa có Sếp phê duyệt.
-- `.gitignore` hiện chứa pattern Laravel thừa; không tự dọn.
+- HTML/CSS thuần, không framework, không build step, không dependencies runtime.
+- Số liệu thương hiệu khớp `documents/trademark-registration.html` (`VN4201735449`); không bịa.
+- Token CSS là nguồn sự thật; KHÔNG hardcode ngoài token.
+- KHÔNG sửa `LICENSE`, `CNAME`, asset brand trong `assets/warm-dream-*.{png,svg}` khi chưa có Sếp phê duyệt.
+- `.gitignore` hiện chứa pattern Laravel thừa; không tự dọn — xem `MEMORY.md` §4.1.
 
 ## 6. Task completion cycle
 
