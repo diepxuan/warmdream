@@ -6,9 +6,11 @@
   --muted: #6f625a;
   --primary: #8b623b;
   --primary-dark: #4f3524;
+  --primary-mid: #9f6a40;
   --green: #274f3d;
   --green-soft: #dfe9df;
   --accent: #c99b5e;
+  --accent-soft: #dbc09a;
   --dark: #17120f;
   --border: rgba(31, 26, 23, 0.12);
   --shadow: 0 24px 80px rgba(64, 43, 28, 0.18);
@@ -220,10 +222,10 @@ h3 {
   width: 12px;
   height: 12px;
   border-radius: 999px;
-  background: #c99b5e;
+  background: var(--accent);
 }
-.card-topbar span:first-child { background: #9f6a40; }
-.card-topbar span:last-child { background: #274f3d; }
+.card-topbar span:first-child { background: var(--primary-mid); }
+.card-topbar span:last-child { background: var(--green); }
 
 .brand-preview {
   min-height: 480px;
@@ -307,7 +309,7 @@ h3 {
   color: white;
 }
 
-.section-dark .eyebrow { color: #dbc09a; }
+.section-dark .eyebrow { color: var(--accent-soft); }
 
 .split {
   display: grid;
